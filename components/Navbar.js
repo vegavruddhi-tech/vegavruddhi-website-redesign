@@ -79,6 +79,12 @@ export default function Navbar() {
         </div>
 
         <div className="flex items-center gap-4">
+          <Link href="/login">
+            <button className="hidden lg:block bg-primary hover:bg-black text-white px-8 py-3.5 rounded-2xl text-xs font-black uppercase tracking-[0.15em] transition-all shadow-xl hover:shadow-black/20 active:scale-95 leading-none">
+              Login / Register
+            </button>
+          </Link>
+
           <Link href="/#enquiry">
             <button className="hidden md:block bg-primary hover:bg-accent text-white px-8 py-3.5 rounded-2xl text-xs font-black uppercase tracking-[0.15em] transition-all shadow-xl hover:shadow-accent/20 active:scale-95 leading-none">
               Enquiry Now
