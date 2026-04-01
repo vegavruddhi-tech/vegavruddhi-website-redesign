@@ -49,6 +49,7 @@ export default function Home() {
                   height={600}
                   className="w-full h-auto drop-shadow-[0_20px_50px_rgba(0,0,0,0.15)] rounded-[3rem]"
                   priority
+                  unoptimized
                 />
               </div>
 
@@ -264,11 +265,11 @@ export default function Home() {
               <h2 className="text-4xl md:text-5xl font-black tracking-tight uppercase">Ready to Scale?</h2>
               <p className="text-xl text-gray-200">Let's design your next growth chapter together.</p>
             </div>
-            <Link href="#enquiry">
+            <a href="#enquiry">
               <button className="bg-white text-primary hover:bg-black hover:text-white px-12 py-5 rounded-full text-xl font-black transition-all shadow-2xl uppercase tracking-widest">
                 Enquiry Now
               </button>
-            </Link>
+            </a>
           </div>
         </div>
       </section>
