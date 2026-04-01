@@ -65,30 +65,33 @@ export default function Navbar() {
           <Link href="/life" className="text-[13px] font-black text-gray-800 hover:text-primary transition-all uppercase tracking-widest relative group">
             Life
             <span className="absolute -bottom-1.5 left-0 w-0 h-0.5 bg-primary transition-all group-hover:w-full rounded-full" />
-          </Link>w
+          </Link>
           <Link href="/partners" className="text-[13px] font-black text-gray-800 hover:text-primary transition-all uppercase tracking-widest relative group">
             Partners
             <span className="absolute -bottom-1.5 left-0 w-0 h-0.5 bg-primary transition-all group-hover:w-full rounded-full" />
           </Link>
-          <Link href="/#enquiry">
-            <button className="text-[13px] font-black text-gray-800 hover:text-primary transition-all uppercase tracking-widest relative group">
-              Contact
-              <span className="absolute -bottom-1.5 left-0 w-0 h-0.5 bg-primary transition-all group-hover:w-full rounded-full" />
-            </button>
+          <Link 
+            href="/#enquiry" 
+            className="text-[13px] font-black text-gray-800 hover:text-primary transition-all uppercase tracking-widest relative group"
+          >
+            Contact
+            <span className="absolute -bottom-1.5 left-0 w-0 h-0.5 bg-primary transition-all group-hover:w-full rounded-full" />
           </Link>
         </div>
 
         <div className="flex items-center gap-4">
-          <Link href="/login">
-            <button className="hidden lg:block bg-primary hover:bg-black text-white px-8 py-3.5 rounded-2xl text-xs font-black uppercase tracking-[0.15em] transition-all shadow-xl hover:shadow-black/20 active:scale-95 leading-none">
-              Login / Register
-            </button>
+          <Link 
+            href="/login" 
+            className="hidden lg:flex items-center justify-center bg-primary hover:bg-black text-white px-8 py-3.5 rounded-2xl text-xs font-black uppercase tracking-[0.15em] transition-all shadow-xl hover:shadow-black/20 active:scale-95 leading-none"
+          >
+            Login / Register
           </Link>
 
-          <Link href="/#enquiry">
-            <button className="hidden md:block bg-primary hover:bg-accent text-white px-8 py-3.5 rounded-2xl text-xs font-black uppercase tracking-[0.15em] transition-all shadow-xl hover:shadow-accent/20 active:scale-95 leading-none">
-              Enquiry Now
-            </button>
+          <Link 
+            href="/#enquiry" 
+            className="hidden md:flex items-center justify-center bg-primary hover:bg-accent text-white px-8 py-3.5 rounded-2xl text-xs font-black uppercase tracking-[0.15em] transition-all shadow-xl hover:shadow-accent/20 active:scale-95 leading-none"
+          >
+            Enquiry Now
           </Link>
 
           {/* Mobile Menu Icon Placeholder */}

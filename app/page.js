@@ -3,6 +3,7 @@ import Link from "next/link";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import StickyActions from "@/components/StickyActions";
+import StatsSection from "@/components/StatsSection";
 
 export default function Home() {
   return (
@@ -253,36 +254,7 @@ export default function Home() {
       </section>
 
       {/* Our Impact Section */}
-      <section className="relative py-40 flex items-center overflow-hidden bg-gray-900">
-        <div className="absolute inset-0 z-0">
-          <Image
-            src="/impact-bg.png"
-            alt="City background"
-            fill
-            sizes="100vw"
-            className="object-cover brightness-[0.2]"
-          />
-          <div className="absolute inset-0 bg-gradient-to-b from-[#004d2c]/40 to-transparent" />
-        </div>
-        <div className="container mx-auto px-4 relative z-10 text-center text-white space-y-20">
-          <div className="space-y-6">
-            <div className="inline-block px-4 py-1.5 bg-white/10 text-white rounded-full text-[10px] font-black uppercase tracking-[0.4em] mb-4 border border-white/20">Our Global Impact</div>
-            <h2 className="text-5xl md:text-7xl font-black tracking-widest uppercase">By The Numbers</h2>
-            <p className="text-lg md:text-xl font-medium max-w-4xl mx-auto leading-relaxed italic text-gray-300">
-              Measurement is the soul of performance. We deliver <span className="text-white font-black underline underline-offset-8">tangible growth</span> through every campaign.
-            </p>
-          </div>
-
-          <div className="grid grid-cols-2 md:grid-cols-5 gap-8">
-            {[["30+", "Cities"], ["200+", "Professionals"], ["100Cr+", "GMV"], ["25k+", "SMEs"], ["100+", "Daily En-gagements"]].map((stat, i) => (
-              <div key={i} className="impact-card">
-                <h3 className="text-4xl md:text-5xl font-black mb-2 text-primary">{stat[0]}</h3>
-                <p className="text-[10px] text-gray-400 font-black uppercase tracking-widest">{stat[1]}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+      <StatsSection />
 
       {/* Ready to Scale CTA */}
       <section className="bg-primary py-20 text-white overflow-hidden">
