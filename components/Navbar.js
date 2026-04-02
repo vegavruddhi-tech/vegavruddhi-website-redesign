@@ -115,7 +115,7 @@ export default function Navbar() {
 
         <div className="flex items-center gap-2 md:gap-4">
           <Link
-            href="/login"
+            href="https://vegavruddhi-employee-panel-ke56.vercel.app/"
             className="hidden lg:flex items-center justify-center bg-primary hover:bg-black text-white px-8 py-3.5 rounded-2xl text-xs font-black uppercase tracking-[0.15em] transition-all shadow-xl hover:shadow-black/20 active:scale-95 leading-none"
           >
             Login / Register
@@ -238,7 +238,7 @@ export default function Navbar() {
 
           <div className={`mt-10 flex flex-col gap-4 ${isMobileMenuOpen ? 'animate-slide-bottom stagger-8 opacity-0' : ''}`}>
             <Link
-              href="/login"
+              href="https://vegavruddhi-employee-panel-ke56.vercel.app/"
               className="w-full flex items-center justify-center bg-gray-900 hover:bg-black text-white px-8 py-5 rounded-2xl text-sm font-black uppercase tracking-widest transition-all shadow-xl shadow-black/10 active:scale-[0.98]"
             >
               Login / Register
