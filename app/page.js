@@ -11,29 +11,29 @@ export default function Home() {
       <Navbar />
 
       {/* Hero Section */}
-      <section className="relative pt-48 pb-32 overflow-hidden">
+      <section className="relative pt-32 md:pt-48 pb-20 md:pb-32 overflow-hidden">
         {/* Abstract Background Element */}
-        <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-primary/5 rounded-full blur-[120px] -translate-y-1/2 translate-x-1/3" />
+        <div className="absolute top-0 right-0 w-[400px] md:w-[600px] h-[400px] md:h-[600px] bg-primary/5 rounded-full blur-[80px] md:blur-[120px] -translate-y-1/2 translate-x-1/3" />
 
         <div className="container mx-auto px-4 relative z-10">
-          <div className="grid lg:grid-cols-2 items-center gap-20">
-            <div className="space-y-10 animate-fade-in-up">
-              <div className="space-y-6">
+          <div className="grid lg:grid-cols-2 items-center gap-12 lg:gap-20">
+            <div className="space-y-8 md:space-y-10 animate-fade-in-up mt-8 md:mt-0">
+              <div className="space-y-4 md:space-y-6">
                 <div className="section-label">Where Execution Meets Growth</div>
-                <h1 className="text-7xl md:text-[6.5rem] font-black text-gray-900 leading-[0.9] tracking-tighter">
+                <h1 className="text-5xl sm:text-6xl md:text-[6.5rem] font-black text-gray-900 leading-[1.1] md:leading-[0.9] tracking-tighter">
                   Experience <br />
                   <span className="text-primary italic">Real Growth.</span>
                 </h1>
-                <p className="text-2xl md:text-3xl text-gray-500 max-w-xl leading-relaxed font-medium">
+                <p className="text-lg sm:text-xl md:text-3xl text-gray-500 max-w-xl leading-relaxed font-medium">
                   End-to-end Sales, Staffing & <br className="hidden md:block" />Customer Engagement Solutions.
                 </p>
               </div>
-              <div className="flex flex-wrap gap-5 pt-4">
-                <Link href="/services" className="btn-primary">
+              <div className="flex flex-col sm:flex-row gap-4 sm:gap-5 pt-4">
+                <Link href="/services" className="btn-primary w-full sm:w-auto text-center justify-center">
                   <span>Explore Our Services</span>
                   <svg className="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="3" d="M13 7l5 5-5 5M6 7l5 5-5 5" /></svg>
                 </Link>
-                <Link href="/partners" className="btn-secondary">
+                <Link href="/partners" className="btn-secondary w-full sm:w-auto text-center">
                   Partner With Us
                 </Link>
               </div>
@@ -71,20 +71,20 @@ export default function Home() {
       </section>
 
       {/* Intro Section */}
-      <section className="py-32 bg-muted/50 border-y border-gray-100 relative">
+      <section className="py-20 md:py-32 bg-muted/50 border-y border-gray-100 relative">
         <div className="container mx-auto px-4 max-w-6xl">
-          <div className="grid md:grid-cols-5 gap-16 items-center">
-            <div className="md:col-span-2">
+          <div className="grid md:grid-cols-5 gap-10 md:gap-16 items-center">
+            <div className="md:col-span-2 space-y-4 md:space-y-0">
               <div className="section-label">The Growth Partner</div>
-              <h2 className="text-4xl md:text-5xl font-black text-gray-900 leading-tight">
+              <h2 className="text-3xl sm:text-4xl md:text-5xl font-black text-gray-900 leading-tight">
                 More than just <br /><span className="text-primary italic">vendor services.</span>
               </h2>
             </div>
-            <div className="md:col-span-3 space-y-8">
-              <p className="text-2xl text-gray-600 leading-relaxed font-semibold border-l-4 border-primary pl-8 italic">
+            <div className="md:col-span-3 space-y-6 md:space-y-8">
+              <p className="text-lg sm:text-xl md:text-2xl text-gray-600 leading-relaxed font-semibold border-l-4 border-primary pl-6 md:pl-8 italic">
                 Vegavruddhi is the growth partner of choice for brands who want impact, not just effort.
               </p>
-              <p className="text-lg text-gray-500 leading-relaxed pl-8">
+              <p className="text-base sm:text-lg text-gray-500 leading-relaxed pl-6 md:pl-8">
                 We bring <span className="text-gray-900 font-bold">accountability</span>, <span className="text-gray-900 font-bold">agile execution</span>, and <span className="text-gray-900 font-bold">unmatched scale</span>—so you can focus on innovation, while we deliver on ground.
               </p>
             </div>
@@ -93,22 +93,22 @@ export default function Home() {
       </section>
 
       {/* Services List Section */}
-      <section className="py-32 overflow-hidden bg-white">
+      <section className="py-20 md:py-32 overflow-hidden bg-white">
         <div className="container mx-auto px-4">
-          <div className="flex flex-col items-center mb-24 space-y-6">
+          <div className="flex flex-col items-center mb-16 md:mb-24 space-y-4 md:space-y-6">
             <div className="section-label">Capabilities</div>
-            <h2 className="text-5xl md:text-7xl font-black text-gray-900 tracking-tighter uppercase text-center leading-none">
-              Our Core <br /><span className="text-primary italic">Expertise</span>
+            <h2 className="text-4xl sm:text-5xl md:text-7xl font-black text-gray-900 tracking-tighter uppercase text-center leading-none">
+              Our Core <br className="md:hidden" /><span className="text-primary italic">Expertise</span>
             </h2>
-            <div className="w-32 h-2 bg-primary rounded-full shadow-[0_4px_12px_rgba(0,77,44,0.3)]" />
+            <div className="w-24 md:w-32 h-1.5 md:h-2 bg-primary rounded-full shadow-[0_4px_12px_rgba(0,77,44,0.3)]" />
           </div>
 
-          <div className="space-y-40">
+          <div className="space-y-24 md:space-y-40">
             {/* Service 1 */}
-            <div className="grid lg:grid-cols-2 items-center gap-24 group">
-              <div className="order-2 lg:order-1 relative">
-                <div className="absolute -inset-10 bg-primary/5 rounded-full blur-[80px] opacity-0 group-hover:opacity-100 transition-opacity duration-1000" />
-                <div className="relative rounded-[3.5rem] overflow-hidden shadow-2xl border-2 border-gray-50 aspect-video">
+            <div className="grid lg:grid-cols-2 items-center gap-12 lg:gap-24 group">
+              <div className="order-1 lg:order-1 relative">
+                <div className="absolute -inset-4 md:-inset-10 bg-primary/5 rounded-full blur-[40px] md:blur-[80px] opacity-0 group-hover:opacity-100 transition-opacity duration-1000" />
+                <div className="relative rounded-[2rem] md:rounded-[3.5rem] overflow-hidden shadow-2xl border-2 border-gray-50 aspect-video">
                   <Image
                     src="/digital_lead_fulfilment.png"
                     alt="Lead fulfillment"
@@ -118,51 +118,51 @@ export default function Home() {
                   />
                 </div>
               </div>
-              <div className="order-1 lg:order-2 space-y-8">
-                <div className="w-16 h-16 bg-gray-50 rounded-2xl flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-white transition-all duration-500 shadow-inner">
-                  <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" /></svg>
+              <div className="order-2 lg:order-2 space-y-6 md:space-y-8">
+                <div className="w-12 h-12 md:w-16 md:h-16 bg-gray-50 rounded-xl md:rounded-2xl flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-white transition-all duration-500 shadow-inner">
+                  <svg className="w-6 h-6 md:w-8 md:h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" /></svg>
                 </div>
-                <div className="space-y-4">
-                  <h3 className="text-4xl md:text-5xl font-black text-gray-900 leading-tight">
-                    Digital Lead Fulfilment &<br className="hidden md:block" /> Retail Audits
+                <div className="space-y-3 md:space-y-4">
+                  <h3 className="text-3xl sm:text-4xl md:text-5xl font-black text-gray-900 leading-tight">
+                    Digital Lead Fulfilment &<br className="hidden lg:block" /> Retail Audits
                   </h3>
-                  <p className="text-xl text-gray-500 leading-relaxed font-medium">
+                  <p className="text-sm sm:text-lg text-gray-500 leading-relaxed font-medium">
                     We bridge the digital-to-field gap. Our tech-enabled lead-management process ensures every online lead converts into a verified customer.
                   </p>
                 </div>
-                <Link href="/service/digital-lead-fulfilment-retail-audits" className="inline-block pt-4">
-                  <button className="bg-primary hover:bg-black text-white px-10 py-4 rounded-xl font-black transition-all shadow-xl flex items-center gap-3 group/btn uppercase tracking-widest text-sm">
+                <Link href="/service/digital-lead-fulfilment-retail-audits" className="inline-block pt-2 md:pt-4 w-full sm:w-auto">
+                  <button className="w-full sm:w-auto justify-center bg-primary hover:bg-black text-white px-8 md:px-10 py-3 md:py-4 rounded-xl font-black transition-all shadow-xl flex items-center gap-3 group/btn uppercase tracking-widest text-xs md:text-sm">
                     View Case Study
-                    <svg className="w-5 h-5 group-hover/btn:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2.5" d="M14 5l7 7-7 7" /></svg>
+                    <svg className="w-4 h-4 md:w-5 md:h-5 group-hover/btn:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2.5" d="M14 5l7 7-7 7" /></svg>
                   </button>
                 </Link>
               </div>
             </div>
 
             {/* Service 2 */}
-            <div className="grid lg:grid-cols-2 items-center gap-24 group">
-              <div className="space-y-8 order-1 lg:order-1">
-                <div className="w-16 h-16 bg-gray-50 rounded-2xl flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-white transition-all duration-500 shadow-inner">
-                  <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" d="M13 10V3L4 14h7v7l9-11h-7z" /></svg>
+            <div className="grid lg:grid-cols-2 items-center gap-12 lg:gap-24 group">
+              <div className="space-y-6 md:space-y-8 order-2 lg:order-1">
+                <div className="w-12 h-12 md:w-16 md:h-16 bg-gray-50 rounded-xl md:rounded-2xl flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-white transition-all duration-500 shadow-inner">
+                  <svg className="w-6 h-6 md:w-8 md:h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" d="M13 10V3L4 14h7v7l9-11h-7z" /></svg>
                 </div>
-                <div className="space-y-4">
-                  <h3 className="text-4xl md:text-5xl font-black text-gray-900 leading-tight">
-                    Managed Sales <br className="hidden md:block" />Process
+                <div className="space-y-3 md:space-y-4">
+                  <h3 className="text-3xl sm:text-4xl md:text-5xl font-black text-gray-900 leading-tight">
+                    Managed Sales <br className="hidden lg:block" />Process
                   </h3>
-                  <p className="text-xl text-gray-500 leading-relaxed font-medium">
+                  <p className="text-sm sm:text-lg text-gray-500 leading-relaxed font-medium">
                     Accelerate your market presence with Vegavruddhi's end-to-end managed sales engine. We deploy trained field teams, set targets, and track every sale.
                   </p>
                 </div>
-                <Link href="/service/managed-sales-process" className="inline-block pt-4">
-                  <button className="bg-primary hover:bg-black text-white px-10 py-4 rounded-xl font-black transition-all shadow-xl flex items-center gap-3 group/btn uppercase tracking-widest text-sm">
+                <Link href="/service/managed-sales-process" className="inline-block pt-2 md:pt-4 w-full sm:w-auto">
+                  <button className="w-full sm:w-auto justify-center bg-primary hover:bg-black text-white px-8 md:px-10 py-3 md:py-4 rounded-xl font-black transition-all shadow-xl flex items-center gap-3 group/btn uppercase tracking-widest text-xs md:text-sm">
                     View Case Study
-                    <svg className="w-5 h-5 group-hover/btn:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2.5" d="M14 5l7 7-7 7" /></svg>
+                    <svg className="w-4 h-4 md:w-5 md:h-5 group-hover/btn:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2.5" d="M14 5l7 7-7 7" /></svg>
                   </button>
                 </Link>
               </div>
-              <div className="relative order-2 lg:order-2">
-                <div className="absolute -inset-10 bg-primary/5 rounded-full blur-[80px] opacity-0 group-hover:opacity-100 transition-opacity duration-1000" />
-                <div className="relative rounded-[3.5rem] overflow-hidden shadow-2xl border-2 border-gray-50 aspect-video">
+              <div className="relative order-1 lg:order-2">
+                <div className="absolute -inset-4 md:-inset-10 bg-primary/5 rounded-full blur-[40px] md:blur-[80px] opacity-0 group-hover:opacity-100 transition-opacity duration-1000" />
+                <div className="relative rounded-[2rem] md:rounded-[3.5rem] overflow-hidden shadow-2xl border-2 border-gray-50 aspect-video">
                   <Image
                     src="/managed_sales_process.png"
                     alt="Sales process"
@@ -175,10 +175,10 @@ export default function Home() {
             </div>
 
             {/* Service 3 */}
-            <div className="grid lg:grid-cols-2 items-center gap-24 group pb-12">
-              <div className="order-2 lg:order-1 relative">
-                <div className="absolute -inset-10 bg-primary/5 rounded-full blur-[80px] opacity-0 group-hover:opacity-100 transition-opacity duration-1000" />
-                <div className="relative rounded-[3.5rem] overflow-hidden shadow-2xl border-2 border-gray-50 aspect-video">
+            <div className="grid lg:grid-cols-2 items-center gap-12 lg:gap-24 group pb-12">
+              <div className="order-1 lg:order-1 relative">
+                <div className="absolute -inset-4 md:-inset-10 bg-primary/5 rounded-full blur-[40px] md:blur-[80px] opacity-0 group-hover:opacity-100 transition-opacity duration-1000" />
+                <div className="relative rounded-[2rem] md:rounded-[3.5rem] overflow-hidden shadow-2xl border-2 border-gray-50 aspect-video">
                   <Image
                     src="/activation_partner_programmes.png"
                     alt="Activation programmes"
@@ -188,15 +188,15 @@ export default function Home() {
                   />
                 </div>
               </div>
-              <div className="order-1 lg:order-2 space-y-8">
-                <div className="w-16 h-16 bg-gray-50 rounded-2xl flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-white transition-all duration-500 shadow-inner">
-                  <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" /></svg>
+              <div className="order-2 lg:order-2 space-y-6 md:space-y-8">
+                <div className="w-12 h-12 md:w-16 md:h-16 bg-gray-50 rounded-xl md:rounded-2xl flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-white transition-all duration-500 shadow-inner">
+                  <svg className="w-6 h-6 md:w-8 md:h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" /></svg>
                 </div>
-                <div className="space-y-4">
-                  <h3 className="text-4xl md:text-5xl font-black text-gray-900 leading-tight">
-                    Activation & Partner<br className="hidden md:block" /> Programmes
+                <div className="space-y-3 md:space-y-4">
+                  <h3 className="text-3xl sm:text-4xl md:text-5xl font-black text-gray-900 leading-tight">
+                    Activation & Partner<br className="hidden lg:block" /> Programmes
                   </h3>
-                  <p className="text-xl text-gray-500 leading-relaxed font-medium">
+                  <p className="text-sm sm:text-lg text-gray-500 leading-relaxed font-medium">
                     Bring your brand closer to customers with impactful on-ground activations. From product launches to partner programmes, we handle logistics.
                   </p>
                 </div>

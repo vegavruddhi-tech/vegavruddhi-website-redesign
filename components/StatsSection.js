@@ -102,7 +102,7 @@ const StatsSection = () => {
   ];
 
   return (
-    <section className="py-40 relative overflow-hidden bg-[#fafafa]">
+    <section className="py-20 md:py-32 relative overflow-hidden bg-[#fafafa]">
       {/* Dynamic Background Elements */}
       <div className="absolute inset-0 pointer-events-none">
         <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-full bg-[radial-gradient(circle_at_center,rgba(0,77,44,0.03)_0,transparent_70%)]" />
@@ -111,17 +111,17 @@ const StatsSection = () => {
       </div>
 
       <div className="container mx-auto px-4 relative z-10">
-        <div className="max-w-4xl mx-auto text-center mb-24 space-y-6">
+        <div className="max-w-4xl mx-auto text-center mb-16 md:mb-24 space-y-4 md:space-y-6">
           <div className="section-label">Real Growth. Real Numbers.</div>
-          <h2 className="text-5xl md:text-7xl font-black text-gray-900 tracking-tighter uppercase leading-none">
+          <h2 className="text-4xl sm:text-5xl md:text-7xl font-black text-gray-900 tracking-tighter uppercase leading-none">
             Empowering India's <br /><span className="text-primary italic">Growth Story</span>
           </h2>
-          <p className="text-xl text-gray-500 font-medium max-w-2xl mx-auto">
-            Our numbers reflect the commitment we have towards building a scalable and and impact-driven ecosystem.
+          <p className="text-lg md:text-xl text-gray-500 font-medium max-w-2xl mx-auto">
+            Our numbers reflect the commitment we have towards building a scalable and impact-driven ecosystem.
           </p>
         </div>
 
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6 md:gap-10">
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4 md:gap-10">
           {stats.map((stat, i) => {
             const numPart = stat.value.match(/[0-9]+/)?.[0] || "";
             const suffixPart = stat.value.replace(numPart, "");
@@ -129,21 +129,22 @@ const StatsSection = () => {
             return (
               <div 
                 key={i} 
-                className="group relative flex flex-col items-center text-center p-10 rounded-[3rem] bg-white border border-gray-100/50 shadow-[0_10px_30px_-15px_rgba(0,0,0,0.03)] hover:shadow-2xl hover:border-primary/20 transition-all duration-700 hover:-translate-y-3"
+                className="group relative flex flex-col items-center text-center p-6 md:p-10 rounded-[2rem] md:rounded-[3rem] bg-white border border-gray-100/50 shadow-[0_10px_30px_-15px_rgba(0,0,0,0.03)] hover:shadow-2xl hover:border-primary/20 transition-all duration-700 hover:-translate-y-2 md:hover:-translate-y-3 lg:col-span-1"
+                style={{ gridColumn: i === 4 ? "1 / -1" : "auto" }}
               >
                 {/* Decorative blob on hover */}
                 <div className="absolute -top-10 -right-10 w-24 h-24 bg-primary/5 rounded-full blur-2xl group-hover:bg-primary/10 transition-colors duration-700" />
                 
-                <div className="relative z-10 space-y-6">
-                  <div className="w-16 h-16 bg-gray-50 rounded-2xl flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-white transition-all duration-700 shadow-inner -rotate-6 group-hover:rotate-0">
-                    {stat.icon}
+                <div className="relative z-10 flex flex-col items-center space-y-4 md:space-y-6">
+                  <div className="w-12 h-12 md:w-16 md:h-16 bg-gray-50 rounded-xl md:rounded-2xl flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-white transition-all duration-700 shadow-inner -rotate-6 group-hover:rotate-0">
+                    {React.cloneElement(stat.icon, { className: "w-6 h-6 md:w-8 md:h-8" })}
                   </div>
                   
-                  <div className="space-y-2">
-                    <h3 className="text-4xl md:text-5xl font-black text-gray-900 tracking-tighter">
+                  <div className="space-y-1 md:space-y-2">
+                    <h3 className="text-3xl md:text-5xl font-black text-gray-900 tracking-tighter">
                       <Counter end={stat.value} suffix={suffixPart} />
                     </h3>
-                    <p className="text-[12px] font-black text-gray-400 uppercase tracking-[0.2em] group-hover:text-primary transition-colors leading-[1.2] px-2">
+                    <p className="text-[10px] md:text-[12px] font-black text-gray-400 uppercase tracking-widest md:tracking-[0.2em] group-hover:text-primary transition-colors leading-tight px-1 md:px-2">
                       {stat.label}
                     </p>
                   </div>
@@ -153,16 +154,16 @@ const StatsSection = () => {
           })}
         </div>
         
-        <div className="mt-24 pt-12 border-t border-gray-100 flex flex-col md:flex-row items-center justify-between gap-8 opacity-60">
-          <p className="text-sm font-bold text-gray-400 uppercase tracking-widest italic font-serif">"Numbers don't lie, but passion drives them."</p>
-          <div className="flex gap-12">
+        <div className="mt-16 md:mt-24 pt-8 md:pt-12 border-t border-gray-100 flex flex-col md:flex-row items-center justify-between gap-6 md:gap-8 opacity-60">
+          <p className="text-xs md:text-sm font-bold text-gray-400 uppercase tracking-widest italic font-serif text-center md:text-left">"Numbers don't lie, but passion drives them."</p>
+          <div className="flex flex-col sm:flex-row gap-4 sm:gap-12">
             <div className="flex items-center gap-3">
               <div className="w-2 h-2 rounded-full bg-primary" />
-              <span className="text-xs font-black text-gray-400 uppercase tracking-widest">Live Performance Data</span>
+              <span className="text-[10px] md:text-xs font-black text-gray-400 uppercase tracking-widest">Live Performance Data</span>
             </div>
             <div className="flex items-center gap-3">
               <div className="w-2 h-2 rounded-full bg-primary" />
-              <span className="text-xs font-black text-gray-400 uppercase tracking-widest">Real-Time Verification</span>
+              <span className="text-[10px] md:text-xs font-black text-gray-400 uppercase tracking-widest">Real-Time Verification</span>
             </div>
           </div>
         </div>
