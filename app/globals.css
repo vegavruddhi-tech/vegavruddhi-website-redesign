@@ -24,6 +24,17 @@
   h5 {
     @apply tracking-tight;
   }
+
+  /* Smooth Scrolling */
+  html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 100px;
+  }
+
+  /* Focus Indicators for Accessibility */
+  :focus-visible {
+    @apply outline-none ring-2 ring-primary ring-offset-2 rounded-lg;
+  }
 }
 
 @theme inline {
@@ -86,3 +97,57 @@
     transform: translateY(0);
   }
 }
+
+@keyframes slide-in-top {
+  0% {
+    transform: translateY(-20px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slide-in-bottom {
+  0% {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes scale-in {
+  0% {
+    transform: scale(0.9);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.animate-slide-top {
+  animation: slide-in-top 0.5s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.animate-slide-bottom {
+  animation: slide-in-bottom 0.5s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.animate-scale-in {
+  animation: scale-in 0.5s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.stagger-1 { animation-delay: 0.1s; }
+.stagger-2 { animation-delay: 0.15s; }
+.stagger-3 { animation-delay: 0.2s; }
+.stagger-4 { animation-delay: 0.25s; }
+.stagger-5 { animation-delay: 0.3s; }
+.stagger-6 { animation-delay: 0.35s; }
+.stagger-7 { animation-delay: 0.4s; }
+.stagger-8 { animation-delay: 0.45s; }

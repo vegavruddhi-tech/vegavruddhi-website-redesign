@@ -11,20 +11,20 @@ export default function Home() {
       <Navbar />
 
       {/* Hero Section */}
-      <section className="relative pt-32 md:pt-48 pb-20 md:pb-32 overflow-hidden">
+      <section className="relative pt-28 md:pt-48 pb-16 md:pb-32 overflow-hidden">
         {/* Abstract Background Element */}
-        <div className="absolute top-0 right-0 w-[400px] md:w-[600px] h-[400px] md:h-[600px] bg-primary/5 rounded-full blur-[80px] md:blur-[120px] -translate-y-1/2 translate-x-1/3" />
+        <div className="absolute top-0 right-0 w-[300px] md:w-[600px] h-[300px] md:h-[600px] bg-primary/5 rounded-full blur-[60px] md:blur-[120px] -translate-y-1/2 translate-x-1/3" />
 
-        <div className="container mx-auto px-4 relative z-10">
-          <div className="grid lg:grid-cols-2 items-center gap-12 lg:gap-20">
-            <div className="space-y-8 md:space-y-10 animate-fade-in-up mt-8 md:mt-0">
+        <div className="container mx-auto px-6 relative z-10">
+          <div className="grid lg:grid-cols-2 items-center gap-10 lg:gap-20">
+            <div className="space-y-6 md:space-y-10 animate-fade-in-up mt-4 md:mt-0">
               <div className="space-y-4 md:space-y-6">
-                <div className="section-label">Where Execution Meets Growth</div>
-                <h1 className="text-5xl sm:text-6xl md:text-[6.5rem] font-black text-gray-900 leading-[1.1] md:leading-[0.9] tracking-tighter">
-                  Experience <br />
+                <div className="section-label !mb-4">Where Execution Meets Growth</div>
+                <h1 className="text-4xl sm:text-6xl md:text-[6.5rem] font-black text-gray-900 leading-[1.1] md:leading-[0.9] tracking-tighter">
+                  Experience <br className="hidden sm:block" />
                   <span className="text-primary italic">Real Growth.</span>
                 </h1>
-                <p className="text-lg sm:text-xl md:text-3xl text-gray-500 max-w-xl leading-relaxed font-medium">
+                <p className="text-base sm:text-xl md:text-3xl text-gray-500 max-w-xl leading-relaxed font-medium">
                   End-to-end Sales, Staffing & <br className="hidden md:block" />Customer Engagement Solutions.
                 </p>
               </div>
@@ -223,7 +223,7 @@ export default function Home() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-7xl mx-auto">
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 md:gap-8 max-w-7xl mx-auto">
             {[
               { name: "Edtech", desc: "Digital learning & student acquisition", icon: "M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" },
               { name: "FinTech & E-Payments", desc: "Merchant onboarding & wallet activations", icon: "M3 10h18M7 15h1m4 0h1m-7 4h12a3 3 0 003-3V8a3 3 0 00-3-3H6a3 3 0 00-3 3v8a3 3 0 003 3z" },
@@ -233,22 +233,22 @@ export default function Home() {
               { name: "Fashion & Lifestyle", desc: "Brand loyalty & luxury retail experience", icon: "M21 15.5l-6.254-6.254a2.91 2.91 0 010-4.113l.317-.317a2.91 2.91 0 014.112 0L21 6.5M15 9.5l-8.254 8.254a2.91 2.91 0 01-4.112 0l-.317-.317a2.91 2.91 0 010-4.112L11.5 5" },
               { name: "Telecom & Digital Services", desc: "Network expansion & subscriber growth", icon: "M8.111 16.404a5.5 5.5 0 017.778 0M12 20h.01m-7.08-7.071a9.5 9.5 0 0113.434 0m-17.678-4.243a15.5 15.5 0 0121.92 0" }
             ].map((sector, i) => (
-              <div key={i} className="bg-white p-10 rounded-[2.5rem] shadow-[0_10px_40px_-15px_rgba(0,0,0,0.05)] border border-gray-100 hover:shadow-2xl hover:border-primary/20 hover:-translate-y-2 transition-all group flex flex-col items-center text-center">
-                <div className="w-20 h-20 bg-gray-50 rounded-3xl flex items-center justify-center text-primary mb-8 group-hover:bg-primary group-hover:text-white transition-all duration-500 shadow-inner">
-                  <svg className="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" d={sector.icon} /></svg>
+              <div key={i} className="bg-white p-6 md:p-10 rounded-[2rem] md:rounded-[2.5rem] shadow-[0_10px_40px_-15px_rgba(0,0,0,0.05)] border border-gray-100 hover:shadow-2xl hover:border-primary/20 hover:-translate-y-2 transition-all group flex flex-col items-center text-center">
+                <div className="w-16 h-16 md:w-20 md:h-20 bg-gray-50 rounded-2xl md:rounded-3xl flex items-center justify-center text-primary mb-6 md:mb-8 group-hover:bg-primary group-hover:text-white transition-all duration-500 shadow-inner">
+                  <svg className="w-8 h-8 md:w-10 md:h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" d={sector.icon} /></svg>
                 </div>
-                <h3 className="text-xl font-black text-gray-900 mb-2 uppercase tracking-tight">{sector.name}</h3>
-                <p className="text-sm font-semibold text-gray-400 group-hover:text-gray-600 transition-colors">{sector.desc}</p>
+                <h3 className="text-sm md:text-xl font-black text-gray-900 mb-1 md:mb-2 uppercase tracking-tight leading-tight">{sector.name}</h3>
+                <p className="text-[10px] md:text-sm font-semibold text-gray-400 group-hover:text-gray-600 transition-colors">{sector.desc}</p>
               </div>
             ))}
 
             {/* Special "More Sectors" placeholder card */}
-            <div className="bg-primary p-12 rounded-[2.5rem] border border-primary text-white flex flex-col items-center justify-center text-center space-y-6 relative overflow-hidden group">
-              <div className="absolute top-0 right-0 w-32 h-32 bg-white/10 rounded-full -translate-y-1/2 translate-x-1/2 blur-2xl group-hover:scale-150 transition-transform duration-700" />
-              <div className="w-12 h-12 rounded-full bg-white text-primary flex items-center justify-center">
-                <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="3" d="M12 4v16m8-8H4" /></svg>
+            <div className="bg-primary p-6 md:p-12 rounded-[2rem] md:rounded-[2.5rem] border border-primary text-white flex flex-col items-center justify-center text-center space-y-4 md:space-y-6 relative overflow-hidden group">
+              <div className="absolute top-0 right-0 w-24 h-24 md:w-32 md:h-32 bg-white/10 rounded-full -translate-y-1/2 translate-x-1/2 blur-2xl group-hover:scale-150 transition-transform duration-700" />
+              <div className="w-10 h-10 md:w-12 md:h-12 rounded-full bg-white text-primary flex items-center justify-center">
+                <svg className="w-5 h-5 md:w-6 md:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="3" d="M12 4v16m8-8H4" /></svg>
               </div>
-              <p className="text-sm font-black uppercase tracking-widest leading-tight">Exploring more <br />Emerging Sectors</p>
+              <p className="text-[10px] md:text-sm font-black uppercase tracking-widest leading-tight">Exploring more <br />Emerging Sectors</p>
             </div>
           </div>
         </div>

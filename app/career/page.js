@@ -2,6 +2,16 @@ import Image from "next/image";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import StickyActions from "@/components/StickyActions";
+import ApplicationForm from "@/components/forms/ApplicationForm";
+
+export const metadata = {
+  title: "Careers | Join the Vegavruddhi Movement",
+  description: "Explore career opportunities at Vegavruddhi. Join our team of field experts, MIS professionals, and growth leaders. We offer transparent pay, career growth, and skill development.",
+  openGraph: {
+    title: "Careers at Vegavruddhi | Build India's Growth Story",
+    description: "Join a dynamic team making a real impact across India. Explore roles in sales, operations, and management at Vegavruddhi.",
+  },
+};
 
 export default function CareerPage() {
   return (
@@ -10,9 +20,9 @@ export default function CareerPage() {
 
       {/* Hero Section */}
       <section className="pt-40 pb-24 bg-gray-50/50 overflow-hidden relative">
-        <div className="absolute top-0 right-0 w-96 h-96 bg-primary/5 rounded-full blur-[120px]" />
+        <div className="absolute top-0 right-0 w-96 h-96 bg-primary/5 rounded-full blur-[120px]" aria-hidden="true" />
         <div className="container mx-auto px-4 text-center space-y-8 animate-fade-in-up">
-            <div className="inline-block px-4 py-1.5 bg-primary/10 text-primary rounded-full text-sm font-bold uppercase tracking-widest mb-4">Careers at Vegavruddhi</div>
+            <div className="inline-block px-4 py-1.5 bg-primary/10 text-primary rounded-full text-sm font-bold uppercase tracking-widest mb-4 border border-primary/20">Careers at Vegavruddhi</div>
             <h1 className="text-5xl md:text-7xl font-black text-gray-900 leading-tight uppercase tracking-tight max-w-5xl mx-auto italic italic-reverse">
                 Join the <span className="text-primary italic">Vegavruddhi</span> Growth Movement
             </h1>
@@ -34,7 +44,7 @@ export default function CareerPage() {
               <p className="text-xl md:text-2xl text-gray-600 leading-relaxed font-medium transition-all group">
                 At Vegavruddhi, growth isn’t just for our clients — it’s for our people. We’re always on the lookout for passionate individuals who thrive on challenges, love the energy of sales, and find joy in creating measurable impact.
               </p>
-              <div className="w-24 h-1 bg-primary mx-auto rounded-full" />
+              <div className="w-24 h-1 bg-primary mx-auto rounded-full" aria-hidden="true" />
           </div>
       </section>
 
@@ -51,16 +61,16 @@ export default function CareerPage() {
                     { title: "MIS Executives", sub: "Data & Area Coordinators", icon: "M9 17v-2m3 2v-4m3 4v-6m2 10H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" },
                     { title: "HR & Training Managers", sub: "People & Process Development", icon: "M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z" }
                 ].map((job, i) => (
-                    <div key={i} className="bg-white p-10 rounded-[2.5rem] border border-gray-100 shadow-sm hover:shadow-2xl transition-all duration-500 group flex flex-col items-center text-center space-y-6">
+                    <article key={i} className="bg-white p-10 rounded-[2.5rem] border border-gray-100 shadow-sm hover:shadow-2xl transition-all duration-500 group flex flex-col items-center text-center space-y-6">
                         <div className="w-16 h-16 bg-gray-50 rounded-2xl flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-white transition-all duration-700 shadow-inner">
                             <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" d={job.icon} /></svg>
                         </div>
                         <div className="space-y-2">
-                            <h4 className="text-xl font-black text-gray-900 uppercase tracking-tight">{job.title}</h4>
+                            <h3 className="text-xl font-black text-gray-900 uppercase tracking-tight">{job.title}</h3>
                             <p className="text-sm font-bold text-gray-400 group-hover:text-primary transition-colors leading-relaxed px-4">{job.sub}</p>
                         </div>
                         <button className="text-xs font-black uppercase tracking-widest text-[#004d2c] border-b-2 border-primary/20 hover:border-primary transition-all py-1">View Details</button>
-                    </div>
+                    </article>
                 ))}
             </div>
         </div>
@@ -89,9 +99,9 @@ export default function CareerPage() {
                   </div>
               </div>
               <div className="md:w-1/2 relative">
-                  <div className="absolute -inset-10 bg-primary/5 rounded-full blur-[100px] opacity-60" />
+                  <div className="absolute -inset-10 bg-primary/5 rounded-full blur-[100px] opacity-60" aria-hidden="true" />
                   <div className="rounded-[4rem] overflow-hidden shadow-2xl relative z-10 border-[12px] border-white">
-                      <Image src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&q=80" width={800} height={600} alt="Team energy" className="w-full h-auto grayscale-50 grayscale hover:grayscale-0 transition-all duration-1000" />
+                      <Image src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&q=80" width={800} height={600} alt="Vegavruddhi Team Culture and Energy" className="w-full h-auto grayscale-50 grayscale hover:grayscale-0 transition-all duration-1000" />
                   </div>
               </div>
           </div>
@@ -102,40 +112,40 @@ export default function CareerPage() {
         <div className="container mx-auto px-4">
             <h2 className="text-4xl font-black text-gray-900 uppercase tracking-tight text-center mb-16">Employee Voices</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-12 max-w-6xl mx-auto">
-                <div className="bg-white p-12 rounded-[2.5rem] border border-gray-100 shadow-sm relative group hover:shadow-2xl transition-all duration-500">
-                    <div className="absolute -top-6 -left-6 text-primary opacity-20 group-hover:opacity-40 transition-opacity">
+                <blockquote className="bg-white p-12 rounded-[2.5rem] border border-gray-100 shadow-sm relative group hover:shadow-2xl transition-all duration-500">
+                    <div className="absolute -top-6 -left-6 text-primary opacity-20 group-hover:opacity-40 transition-opacity" aria-hidden="true">
                         <svg className="w-24 h-24" fill="currentColor" viewBox="0 0 24 24"><path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z" /></svg>
                     </div>
                     <p className="text-xl text-gray-600 font-bold italic leading-relaxed relative z-10">
                         "From trainee to team leader in a year — Vegavruddhi gave me real growth, not just promises."
                     </p>
                     <div className="pt-8 border-t border-gray-50 mt-8">
-                        <h5 className="text-lg font-black text-gray-900">— Field Executive</h5>
+                        <cite className="text-lg font-black text-gray-900 not-italic">— Field Executive</cite>
                         <p className="text-sm font-bold text-gray-400 uppercase tracking-widest">Jaipur Branch</p>
                     </div>
-                </div>
-                <div className="bg-white p-12 rounded-[2.5rem] border border-gray-100 shadow-sm relative group hover:shadow-2xl transition-all duration-500">
-                    <div className="absolute -top-6 -right-6 text-accent opacity-20 group-hover:opacity-40 transition-opacity">
+                </blockquote>
+                <blockquote className="bg-white p-12 rounded-[2.5rem] border border-gray-100 shadow-sm relative group hover:shadow-2xl transition-all duration-500">
+                    <div className="absolute -top-6 -right-6 text-accent opacity-20 group-hover:opacity-40 transition-opacity" aria-hidden="true">
                         <svg className="w-24 h-24" fill="currentColor" viewBox="0 0 24 24"><path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z" /></svg>
                     </div>
                     <p className="text-xl text-gray-600 font-bold italic leading-relaxed relative z-10">
                     “Every day feels like I’m contributing to something bigger than my job.”
                     </p>
                     <div className="pt-8 border-t border-gray-50 mt-8">
-                        <h5 className="text-lg font-black text-gray-900">— Operations Coordinator</h5>
+                        <cite className="text-lg font-black text-gray-900 not-italic">— Operations Coordinator</cite>
                         <p className="text-sm font-bold text-gray-400 uppercase tracking-widest">Lucknow Branch</p>
                     </div>
-                </div>
+                </blockquote>
             </div>
         </div>
       </section>
 
-      {/* Application Form */}
+      {/* Application Form Section */}
       <section className="py-32 bg-white relative overflow-hidden" id="apply">
         <div className="container mx-auto px-4">
             <div className="max-w-5xl mx-auto grid md:grid-cols-2 bg-[#0a2318] rounded-[4rem] overflow-hidden shadow-2xl">
                 <div className="p-16 flex flex-col justify-center space-y-8 text-white relative">
-                    <div className="absolute top-0 right-0 w-64 h-64 bg-primary/10 rounded-full blur-[80px]" />
+                    <div className="absolute top-0 right-0 w-64 h-64 bg-primary/10 rounded-full blur-[80px]" aria-hidden="true" />
                     <h2 className="text-5xl font-black uppercase tracking-tight leading-tight">Apply Now</h2>
                     <p className="text-xl text-gray-400 font-medium">Ready to start your journey? Fill out the details and our HR team will reach out to you.</p>
                     <div className="space-y-6">
@@ -153,51 +163,7 @@ export default function CareerPage() {
                         </div>
                     </div>
                 </div>
-                <div className="bg-white p-16">
-                    <form className="space-y-6">
-                        <div className="space-y-2">
-                            <label className="text-xs font-black text-gray-500 uppercase tracking-widest ml-1">Full Name</label>
-                            <input type="text" placeholder="Enter your name" className="w-full px-6 py-4 rounded-2xl bg-gray-50 border border-gray-100 focus:bg-white focus:border-primary focus:ring-4 focus:ring-primary/10 outline-none transition-all font-bold" />
-                        </div>
-                        <div className="grid grid-cols-2 gap-6">
-                            <div className="space-y-2">
-                                <label className="text-xs font-black text-gray-500 uppercase tracking-widest ml-1">Email</label>
-                                <input type="email" placeholder="Enter your email" className="w-full px-6 py-4 rounded-2xl bg-gray-50 border border-gray-100 focus:bg-white focus:border-primary focus:ring-4 focus:ring-primary/10 outline-none transition-all font-bold" />
-                            </div>
-                            <div className="space-y-2">
-                                <label className="text-xs font-black text-gray-500 uppercase tracking-widest ml-1">Phone Number</label>
-                                <input type="text" placeholder="Enter your phone" className="w-full px-6 py-4 rounded-2xl bg-gray-50 border border-gray-100 focus:bg-white focus:border-primary focus:ring-4 focus:ring-primary/10 outline-none transition-all font-bold" />
-                            </div>
-                        </div>
-                        <div className="space-y-2">
-                            <label className="text-xs font-black text-gray-500 uppercase tracking-widest ml-1">Current Location</label>
-                            <input type="text" placeholder="City / State" className="w-full px-6 py-4 rounded-2xl bg-gray-50 border border-gray-100 focus:bg-white focus:border-primary focus:ring-4 focus:ring-primary/10 outline-none transition-all font-bold" />
-                        </div>
-                        <div className="space-y-2">
-                            <label className="text-xs font-black text-gray-500 uppercase tracking-widest ml-1">Applying For</label>
-                            <select className="w-full px-6 py-4 rounded-2xl bg-gray-50 border border-gray-100 focus:bg-white focus:border-primary focus:ring-4 focus:ring-primary/10 outline-none transition-all font-bold appearance-none cursor-pointer">
-                                <option>Select Role</option>
-                                <option>Field Sales Executive</option>
-                                <option>Team Leader</option>
-                                <option>Tele-caller</option>
-                                <option>MIS Executive / Coordinator</option>
-                                <option>HR & Training Manager</option>
-                            </select>
-                        </div>
-                        <div className="space-y-2">
-                            <label className="text-xs font-black text-gray-500 uppercase tracking-widest ml-1">Upload Resume</label>
-                            <div className="relative group">
-                                <input type="file" className="w-full px-6 py-4 rounded-2xl bg-gray-50 border border-gray-100 focus:bg-white focus:border-primary outline-none transition-all font-bold file:hidden cursor-pointer" />
-                                <div className="absolute inset-y-0 right-0 flex items-center pr-6 pointer-events-none text-gray-400 group-hover:text-primary transition-colors">
-                                    <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12" /></svg>
-                                </div>
-                            </div>
-                        </div>
-                        <button className="w-full bg-[#004d2c] hover:bg-black text-white py-5 rounded-2xl font-black text-xl shadow-xl transition-all uppercase tracking-widest mt-4">
-                            Submit Application →
-                        </button>
-                    </form>
-                </div>
+                <ApplicationForm />
             </div>
         </div>
       </section>

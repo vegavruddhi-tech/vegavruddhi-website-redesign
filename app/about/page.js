@@ -3,6 +3,15 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import StickyActions from "@/components/StickyActions";
 
+export const metadata = {
+  title: "About Us",
+  description: "Learn more about Vegavruddhi, our story, mission, vision, and core values. Discover how we are becoming India's most trusted partner in managed sales and customer engagement.",
+  openGraph: {
+    title: "About Vegavruddhi | Our Mission & Values",
+    description: "Discover the story behind Vegavruddhi and our commitment to excellence, integrity, and social impact across India.",
+  },
+};
+
 export default function AboutPage() {
   return (
     <div className="min-h-screen bg-white">
@@ -24,22 +33,22 @@ export default function AboutPage() {
               <h2 className="text-4xl font-extrabold text-[#004d2c] uppercase tracking-tight">Our Story</h2>
               <div className="space-y-6 text-xl text-gray-600 leading-relaxed font-medium">
                 <p>
-                  Vegavruddhi (growth in Sanskrit-derived sense) was founded with a vision to enable businesses to thrive in dynamic markets. 
+                  Vegavruddhi (growth in Sanskrit-derived sense) was founded with a vision to enable businesses to thrive in dynamic markets.
                   Inspired by the need for partner-led, value-first services, we built an organisation that emphasises not just what gets done—but how it gets done: transparently, ethically and effectively.
                 </p>
                 <p>
-                  Our journey began with a simple belief: <strong className="text-black group-hover:text-primary transition-colors">execution defines success.</strong> 
+                  Our journey began with a simple belief: <strong className="text-black group-hover:text-primary transition-colors">execution defines success.</strong>
                   From fintech to FMCG, from urban hubs to rural markets — we’ve built teams, systems, and trust where it matters most — on the ground.
                 </p>
               </div>
             </div>
             <div className="lg:col-span-2 relative">
               <div className="absolute -inset-10 bg-primary/5 rounded-full blur-3xl opacity-60" />
-              <Image 
-                src="/about1.png" 
-                alt="Our Story Illustration" 
-                width={600} 
-                height={500} 
+              <Image
+                src="/about1.png"
+                alt="Our Story Illustration"
+                width={600}
+                height={500}
                 className="relative z-10 w-full h-auto drop-shadow-2xl hover:scale-105 transition-transform duration-700"
               />
             </div>
@@ -51,28 +60,28 @@ export default function AboutPage() {
       <section className="py-24 bg-[#0a2318] text-white overflow-hidden relative">
         <div className="absolute top-0 right-0 w-96 h-96 bg-primary/20 rounded-full blur-[120px]" />
         <div className="absolute bottom-0 left-0 w-96 h-96 bg-accent/10 rounded-full blur-[120px]" />
-        
+
         <div className="container mx-auto px-4 relative z-10">
           <div className="grid md:grid-cols-2 gap-12">
             {/* Mission */}
             <div className="bg-white/5 border border-white/10 p-12 rounded-[2.5rem] backdrop-blur-md space-y-6 hover:bg-white/10 transition-all duration-500">
-                <div className="w-16 h-16 bg-primary rounded-2xl flex items-center justify-center">
-                    <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M13 10V3L4 14h7v7l9-11h-7z" /></svg>
-                </div>
-                <h3 className="text-3xl font-black uppercase tracking-tight">Our Mission</h3>
-                <p className="text-xl text-gray-300 leading-relaxed font-medium">
-                  To be the trusted growth engine for brands, enabling them to engage meaningfully, convert reliably and scale sustainably.
-                </p>
+              <div className="w-16 h-16 bg-primary rounded-2xl flex items-center justify-center">
+                <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M13 10V3L4 14h7v7l9-11h-7z" /></svg>
+              </div>
+              <h3 className="text-3xl font-black uppercase tracking-tight">Our Mission</h3>
+              <p className="text-xl text-gray-300 leading-relaxed font-medium">
+                To be the trusted growth engine for brands, enabling them to engage meaningfully, convert reliably and scale sustainably.
+              </p>
             </div>
             {/* Vision */}
             <div className="bg-white/5 border border-white/10 p-12 rounded-[2.5rem] backdrop-blur-md space-y-6 hover:bg-white/10 transition-all duration-500">
-                <div className="w-16 h-16 bg-accent rounded-2xl flex items-center justify-center">
-                    <svg className="w-8 h-8 text-black" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" /><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" /></svg>
-                </div>
-                <h3 className="text-3xl font-black uppercase tracking-tight">Our Vision</h3>
-                <p className="text-xl text-gray-300 leading-relaxed font-medium">
-                  To be India’s most trusted partner in managed sales, staffing, and customer engagement — combining technology, transparency, and teamwork to fuel business success.
-                </p>
+              <div className="w-16 h-16 bg-accent rounded-2xl flex items-center justify-center">
+                <svg className="w-8 h-8 text-black" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" /><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" /></svg>
+              </div>
+              <h3 className="text-3xl font-black uppercase tracking-tight">Our Vision</h3>
+              <p className="text-xl text-gray-300 leading-relaxed font-medium">
+                To be India’s most trusted partner in managed sales, staffing, and customer engagement — combining technology, transparency, and teamwork to fuel business success.
+              </p>
             </div>
           </div>
         </div>
@@ -95,13 +104,13 @@ export default function AboutPage() {
               { title: "Inclusivity", desc: "We build opportunities for growth — for everyone.", icon: "M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" }
             ].map((value, i) => (
               <div key={i} className="bg-white p-10 rounded-[2.5rem] border border-gray-100 shadow-sm hover:shadow-2xl transition-all duration-500 group flex flex-col items-center text-center space-y-6">
-                  <div className="w-16 h-16 bg-gray-50 rounded-2xl flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-white transition-all duration-700 shadow-inner">
-                      <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" d={value.icon} /></svg>
-                  </div>
-                  <div className="space-y-3">
-                      <h4 className="text-xl font-black text-gray-900 uppercase tracking-tight leading-none">{value.title}</h4>
-                      <p className="text-sm font-semibold text-gray-400 group-hover:text-gray-500 transition-colors leading-relaxed px-2">{value.desc}</p>
-                  </div>
+                <div className="w-16 h-16 bg-gray-50 rounded-2xl flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-white transition-all duration-700 shadow-inner">
+                  <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" d={value.icon} /></svg>
+                </div>
+                <div className="space-y-3">
+                  <h4 className="text-xl font-black text-gray-900 uppercase tracking-tight leading-none">{value.title}</h4>
+                  <p className="text-sm font-semibold text-gray-400 group-hover:text-gray-500 transition-colors leading-relaxed px-2">{value.desc}</p>
+                </div>
               </div>
             ))}
           </div>
@@ -114,11 +123,11 @@ export default function AboutPage() {
           <div className="grid md:grid-cols-2 items-center gap-16">
             <div className="relative order-2 md:order-1">
               <div className="absolute -inset-10 bg-primary/5 rounded-full blur-3xl opacity-60" />
-              <Image 
-                src="/about2.png" 
-                alt="Our Team" 
-                width={600} 
-                height={500} 
+              <Image
+                src="/about2.png"
+                alt="Our Team"
+                width={600}
+                height={500}
                 className="relative z-10 w-full h-auto drop-shadow-2xl"
               />
             </div>
@@ -154,11 +163,11 @@ export default function AboutPage() {
             </div>
             <div className="relative">
               <div className="absolute -inset-10 bg-accent/10 rounded-full blur-3xl opacity-60" />
-              <Image 
-                src="/about3.png" 
-                alt="Social Impact" 
-                width={600} 
-                height={500} 
+              <Image
+                src="/about3.png"
+                alt="Social Impact"
+                width={600}
+                height={500}
                 className="relative z-10 w-full h-auto drop-shadow-2xl"
               />
             </div>

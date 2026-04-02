@@ -27,22 +27,24 @@ const Counter = ({ end, duration = 2000, suffix = "" }) => {
   useEffect(() => {
     if (!isVisible) return;
 
-    let start = 0;
-    // Extract number from string like "30+" or "100Cr+"
+    let startTime = null;
     const endValue = parseInt(end.replace(/[^0-9]/g, ""), 10);
-    const increment = endValue / (duration / 16);
-    
-    const timer = setInterval(() => {
-      start += increment;
-      if (start >= endValue) {
-        setCount(endValue);
-        clearInterval(timer);
-      } else {
-        setCount(Math.floor(start));
-      }
-    }, 16);
 
-    return () => clearInterval(timer);
+    const step = (timestamp) => {
+      if (!startTime) startTime = timestamp;
+      const progress = Math.min((timestamp - startTime) / duration, 1);
+
+      // Easing function: easeOutExpo
+      const easedProgress = progress === 1 ? 1 : 1 - Math.pow(2, -10 * progress);
+
+      setCount(Math.floor(easedProgress * endValue));
+
+      if (progress < 1) {
+        window.requestAnimationFrame(step);
+      }
+    };
+
+    window.requestAnimationFrame(step);
   }, [isVisible, end, duration]);
 
   return (
@@ -121,25 +123,25 @@ const StatsSection = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4 md:gap-10">
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4 md:gap-8 lg:gap-10">
           {stats.map((stat, i) => {
             const numPart = stat.value.match(/[0-9]+/)?.[0] || "";
             const suffixPart = stat.value.replace(numPart, "");
-            
+
             return (
-              <div 
-                key={i} 
-                className="group relative flex flex-col items-center text-center p-6 md:p-10 rounded-[2rem] md:rounded-[3rem] bg-white border border-gray-100/50 shadow-[0_10px_30px_-15px_rgba(0,0,0,0.03)] hover:shadow-2xl hover:border-primary/20 transition-all duration-700 hover:-translate-y-2 md:hover:-translate-y-3 lg:col-span-1"
-                style={{ gridColumn: i === 4 ? "1 / -1" : "auto" }}
+              <div
+                key={i}
+                className={`group relative flex flex-col items-center text-center p-6 md:p-10 rounded-[2rem] md:rounded-[3.5rem] bg-white border border-gray-100/50 shadow-[0_10px_30px_-15px_rgba(0,0,0,0.03)] hover:shadow-2xl hover:border-primary/20 transition-all duration-700 hover:-translate-y-2 md:hover:-translate-y-3 ${i === 4 ? "col-span-2 md:col-span-1 lg:col-span-1" : "col-span-1"
+                  }`}
               >
                 {/* Decorative blob on hover */}
                 <div className="absolute -top-10 -right-10 w-24 h-24 bg-primary/5 rounded-full blur-2xl group-hover:bg-primary/10 transition-colors duration-700" />
-                
+
                 <div className="relative z-10 flex flex-col items-center space-y-4 md:space-y-6">
                   <div className="w-12 h-12 md:w-16 md:h-16 bg-gray-50 rounded-xl md:rounded-2xl flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-white transition-all duration-700 shadow-inner -rotate-6 group-hover:rotate-0">
                     {React.cloneElement(stat.icon, { className: "w-6 h-6 md:w-8 md:h-8" })}
                   </div>
-                  
+
                   <div className="space-y-1 md:space-y-2">
                     <h3 className="text-3xl md:text-5xl font-black text-gray-900 tracking-tighter">
                       <Counter end={stat.value} suffix={suffixPart} />
@@ -153,7 +155,7 @@ const StatsSection = () => {
             );
           })}
         </div>
-        
+
         <div className="mt-16 md:mt-24 pt-8 md:pt-12 border-t border-gray-100 flex flex-col md:flex-row items-center justify-between gap-6 md:gap-8 opacity-60">
           <p className="text-xs md:text-sm font-bold text-gray-400 uppercase tracking-widest italic font-serif text-center md:text-left">"Numbers don't lie, but passion drives them."</p>
           <div className="flex flex-col sm:flex-row gap-4 sm:gap-12">

@@ -4,6 +4,15 @@ import Footer from "@/components/Footer";
 import StickyActions from "@/components/StickyActions";
 import Link from "next/link";
 
+export const metadata = {
+  title: "Growth Partner Network | Collaborate with Us",
+  description: "Join Vegavruddhi's Growth Partner Network. Whether you are an agency, staffing firm, or activation specialist, partner with us to deliver projects for top brands across India.",
+  openGraph: {
+    title: "Partner with Vegavruddhi | India's Fastest Ecosystem",
+    description: "Access a steady flow of projects, transparent payouts, and dedicated support. Register as a Vegavruddhi growth partner today.",
+  },
+};
+
 export default function GrowthPartnerPage() {
   return (
     <div className="min-h-screen bg-white">

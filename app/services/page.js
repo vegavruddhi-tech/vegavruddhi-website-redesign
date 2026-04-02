@@ -4,6 +4,15 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import StickyActions from "@/components/StickyActions";
 
+export const metadata = {
+  title: "Our Services | Expert IT & Business Solutions",
+  description: "Explore our comprehensive suite of services including Digital Lead Fulfilment, Managed Sales Process, and Activation Partner Programmes. Scalable solutions for your business growth.",
+  openGraph: {
+    title: "Vegavruddhi Services | Scalable Business Execution",
+    description: "Discover how we bridge the gap between strategy and execution with our managed sales, staffing, and customer engagement solutions.",
+  },
+};
+
 export default function ServicesPage() {
   return (
     <div className="min-h-screen bg-white">

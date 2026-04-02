@@ -4,6 +4,15 @@ import Footer from "@/components/Footer";
 import StickyActions from "@/components/StickyActions";
 import Link from "next/link";
 
+export const metadata = {
+  title: "Life at Vegavruddhi | Our Culture & Team",
+  description: "Experience the vibrant culture at Vegavruddhi. Discover our vibe pillars, collaborative magic, and the team driving growth across India. Join our tribe today.",
+  openGraph: {
+    title: "Life @ Vegavruddhi | Passion Meets Execution",
+    description: "Explore our work culture, team meetups, and the milestones we celebrate. See what makes Vegavruddhi a unique place to work.",
+  },
+};
+
 export default function LifeAtVegavruddhi() {
   return (
     <div className="min-h-screen bg-white">
