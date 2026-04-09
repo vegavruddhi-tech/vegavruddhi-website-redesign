@@ -108,8 +108,8 @@ export default function ApplicationForm() {
             onChange={(e) => setFormData({ ...formData, position: e.target.value })}
           >
             <option value="" disabled className="bg-[#0a2318]">Select a role</option>
-            <option value="Field Sales Executive" className="bg-[#0a2318]">Field Sales Executive</option>
-            <option value="Team Leader" className="bg-[#0a2318]">Team Leader</option>
+            <option value="FSE" className="bg-[#0a2318]">FSE</option>
+            <option value="TL" className="bg-[#0a2318]">TL</option>
             <option value="Tele-caller" className="bg-[#0a2318]">Tele-caller</option>
             <option value="MIS Executive" className="bg-[#0a2318]">MIS Executive</option>
             <option value="HR & Training Manager" className="bg-[#0a2318]">HR & Training Manager</option>
