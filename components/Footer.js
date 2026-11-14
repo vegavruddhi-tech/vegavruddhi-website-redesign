@@ -87,10 +87,10 @@ export default function Footer() {
 
           {/* Column 4: Map */}
           <div className="md:col-span-1">
-            <h3 className="text-xl font-black text-white mb-8 tracking-tight uppercase">Our Headquarters</h3>
+            <h3 className="text-xl font-black text-white mb-8 tracking-tight uppercase">Our Office Location</h3>
             <div className="rounded-2xl overflow-hidden border border-white/10 shadow-2xl h-56 group relative bg-white/5">
               <iframe
-                src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d14245.858695364466!2d75.872139!3d26.809754!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x396dc90038b3356f%3A0xe16541f9be29a7e1!2sVegavruddhi%20Pvt.%20Ltd.!5e0!3m2!1sen!2sin!4v1711985442533!5m2!1sen!2sin"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3509.324838634568!2d77.0360501!3d28.3997063!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390d23231e931b43%3A0xaa72301c6283d4cb!2sVegavruddhi%20Private%20Limited!5e0!3m2!1sen!2sin!4v1731566000000!5m2!1sen!2sin"
                 width="100%"
                 height="100%"
                 style={{ border: 0 }}
@@ -101,14 +101,14 @@ export default function Footer() {
               ></iframe>
               <div className="absolute inset-0 bg-gradient-to-t from-[#0a2318] via-transparent to-transparent opacity-60 group-hover:opacity-20 transition-opacity pointer-events-none" />
               <Link
-                href="https://www.google.com/maps?ll=26.809754,75.872139&z=15&t=m&hl=en&gl=IN&mapclient=embed&cid=16272543859477685729"
+                href="https://maps.app.goo.gl/wjRSEsvLmJwJ9AD99"
                 target="_blank"
                 className="absolute bottom-4 left-4 right-4 bg-primary text-white py-3 rounded-xl text-xs font-black shadow-2xl opacity-0 group-hover:opacity-100 transition-all transform translate-y-2 group-hover:translate-y-0 text-center uppercase tracking-widest"
               >
                 Get Directions ↗
               </Link>
             </div>
-            <p className="mt-4 text-[10px] font-bold text-gray-500 uppercase tracking-widest text-center">Vinayak Enclave, Jagatpura, Jaipur</p>
+            <p className="mt-4 text-[10px] font-bold text-gray-500 uppercase tracking-widest text-center">Spaze Plazo, Sector 69, Gurugram</p>
           </div>
 
 
