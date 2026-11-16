@@ -98,19 +98,10 @@ export default function Navbar() {
             Partners
             <span className="absolute -bottom-1.5 left-0 w-0 h-0.5 bg-primary transition-all group-hover:w-full rounded-full" />
           </Link>
-          <a
-            href="#enquiry"
-            className="text-[12px] 2xl:text-[13px] font-black text-gray-800 hover:text-primary transition-all uppercase tracking-widest relative group"
-            onClick={(e) => {
-              if (pathname !== "/") {
-                e.preventDefault();
-                window.location.href = "/#enquiry";
-              }
-            }}
-          >
+          <Link href="/#enquiry" className="text-[12px] 2xl:text-[13px] font-black text-gray-800 hover:text-primary transition-all uppercase tracking-widest relative group">
             Contact
             <span className="absolute -bottom-1.5 left-0 w-0 h-0.5 bg-primary transition-all group-hover:w-full rounded-full" />
-          </a>
+          </Link>
         </div>
 
         <div className="flex items-center gap-3 2xl:gap-4">
@@ -121,18 +112,9 @@ export default function Navbar() {
             Login / Register
           </Link>
 
-          <a
-            href="#enquiry"
-            className="hidden md:flex items-center justify-center bg-primary hover:bg-accent text-white px-5 2xl:px-8 py-3 rounded-xl 2xl:rounded-2xl text-[10px] 2xl:text-xs font-black uppercase tracking-widest transition-all shadow-xl hover:shadow-accent/20 active:scale-95 leading-none"
-            onClick={(e) => {
-              if (pathname !== "/") {
-                e.preventDefault();
-                window.location.href = "/#enquiry";
-              }
-            }}
-          >
+          <Link href="/#enquiry" className="hidden md:flex items-center justify-center bg-primary hover:bg-accent text-white px-5 2xl:px-8 py-3 rounded-xl 2xl:rounded-2xl text-[10px] 2xl:text-xs font-black uppercase tracking-widest transition-all shadow-xl hover:shadow-accent/20 active:scale-95 leading-none">
             Enquiry Now
-          </a>
+          </Link>
 
           {/* Mobile Menu Icon */}
           <button
@@ -221,19 +203,10 @@ export default function Navbar() {
               <svg className="w-5 h-5 opacity-0 -translate-x-4 group-hover:opacity-100 group-hover:translate-x-0 transition-all text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="3" d="M14 5l7 7-7 7" /></svg>
             </Link>
 
-            <a
-              href="#enquiry"
-              className={`hover:text-primary transition-colors border-b border-gray-100/50 pb-4 flex items-center justify-between group ${isMobileMenuOpen ? 'animate-slide-top stagger-7 opacity-100' : 'opacity-0'}`}
-              onClick={(e) => {
-                setIsMobileMenuOpen(false);
-                if (pathname !== "/") {
-                  window.location.href = "/#enquiry";
-                }
-              }}
-            >
+            <Link href="/#enquiry" className={`hover:text-primary transition-colors border-b border-gray-100/50 pb-4 flex items-center justify-between group ${isMobileMenuOpen ? 'animate-slide-top stagger-7 opacity-100' : 'opacity-0'}`}>
               <span>Contact</span>
               <svg className="w-5 h-5 opacity-0 -translate-x-4 group-hover:opacity-100 group-hover:translate-x-0 transition-all text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="3" d="M14 5l7 7-7 7" /></svg>
-            </a>
+            </Link>
           </div>
 
           <div className={`mt-10 flex flex-col gap-4 ${isMobileMenuOpen ? 'animate-slide-bottom stagger-8 opacity-100' : 'opacity-0'}`}>
@@ -243,18 +216,9 @@ export default function Navbar() {
             >
               Login / Register
             </Link>
-            <a
-              href="#enquiry"
-              className="w-full flex items-center justify-center bg-primary hover:bg-accent text-white px-8 py-5 rounded-2xl text-sm font-black uppercase tracking-widest transition-all shadow-xl shadow-primary/20 active:scale-[0.98]"
-              onClick={() => {
-                setIsMobileMenuOpen(false);
-                if (pathname !== "/") {
-                  window.location.href = "/#enquiry";
-                }
-              }}
-            >
+            <Link href="/#enquiry" className="w-full flex items-center justify-center bg-primary hover:bg-accent text-white px-8 py-5 rounded-2xl text-sm font-black uppercase tracking-widest transition-all shadow-xl shadow-primary/20 active:scale-[0.98]">
               Enquiry Now
-            </a>
+            </Link>
           </div>
 
           <div className={`mt-auto pt-10 flex flex-col gap-6 ${isMobileMenuOpen ? 'animate-fade-in-up stagger-8 opacity-100' : 'opacity-0'}`}>
@@ -270,7 +234,7 @@ export default function Navbar() {
               <a href="tel:+919116616636" className="w-10 h-10 rounded-full bg-gray-50 flex items-center justify-center text-gray-600 hover:bg-primary hover:text-white transition-all">
                 <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" /></svg>
               </a>
-              <a href="mailto:contact@vega.com" className="w-10 h-10 rounded-full bg-gray-50 flex items-center justify-center text-gray-600 hover:bg-primary hover:text-white transition-all">
+              <a href="mailto:saurabh@vegavruddhi.com" className="w-10 h-10 rounded-full bg-gray-50 flex items-center justify-center text-gray-600 hover:bg-primary hover:text-white transition-all">
                 <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" /></svg>
               </a>
             </div>
